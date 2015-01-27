@@ -47,7 +47,7 @@ Ext.extend(fsZIP.panel.Home, MODx.Panel, {
         window.open("/archive/zip.php");
     },
     doDump: function() {
-        window.open("/arcive/dumper.php");
+        window.open("/archive/dumper.php");
     }
 });
 Ext.reg('fszip-panel-home',fsZIP.panel.Home);
