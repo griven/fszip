@@ -1,0 +1,9 @@
+Changelog file for fsZIP component.
+
+fsZIP 1.0.1
+====================================
+- Changed buttons for modx 2.3.2
+
+fsZIP 1.0.0
+====================================
+- Initial commit
