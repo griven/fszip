@@ -9,6 +9,7 @@ if(count($_POST) && !empty($_POST["filename"])) {
 	$dumper = new MySQLDump($dbase,$dumpFileName,false,false);
 	mysql_query("set names utf8");
 	@$dumper->doDump();
+    
   // фикс заменяющий неработающую CURRENT_TIMESTAMP на наших серверах
   $fileContents = file_get_contents($dumpFileName);
   $fileContents = str_ireplace('CURRENT_TIMESTAMP','0000-00-00 00:00:00',$fileContents);
