@@ -1,11 +1,10 @@
 <?
 include("../core/config/config.inc.php");
-//include("class_mysqldump.php");
 include("mysqldump.php");
 
 $ready = false;
 if(count($_POST) && !empty($_POST["filename"])) {
-	mysql_connect($database_server, $database_user, $database_password) or die("Fucking shit! We have troubles!");
+	mysql_connect($database_server, $database_user, $database_password) or die("Can't connect to database!");
   $dumpFileName = "dumps/".$_POST["filename"].".sql";
 	$dumper = new MySQLDump($dbase,$dumpFileName,false,false);
 	mysql_query("set names utf8");
